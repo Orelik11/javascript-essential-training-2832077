@@ -9,10 +9,14 @@ const posX = document.querySelector(".posX span");
 const posY = document.querySelector(".posY span");
 
 // Log when the button is clicked in the console.
-button.addEventListener("click", () => {
-  button.classList.toggle("active");
-  console.log("Button was clicked!");
-}, false);
+button.addEventListener(
+  "click",
+  () => {
+    button.classList.toggle("active");
+    console.log("Button was clicked!");
+  },
+  false
+);
 
 // Update the x and y displays to show the current mouse position.
 const mousePosition = (event) => {
@@ -21,6 +25,21 @@ const mousePosition = (event) => {
 };
 
 window.addEventListener("mousemove", mousePosition, false);
+button.addEventListener(
+  "mouseenter",
+  () => {
+    container.classList.add("purple");
+  },
+  false
+);
+
+button.addEventListener(
+  "mouseleave",
+  () => {
+    container.classList.remove("purple");
+  },
+  false
+);
 
 // Change the color of the box when the mouse enters.
 container.addEventListener(

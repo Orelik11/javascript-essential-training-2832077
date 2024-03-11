@@ -51,3 +51,20 @@ const tipCalculator = (sum, percentage, locale, currency) => {
 };
 
 tipCalculator(29.95, 18, "de-DE", "EUR");
+
+const newFigure = (imgSrc = "", imgDescr = "") => {
+  const newElement = document.createElement("img");
+  newElement.setAttribute("src", imgSrc);
+  newElement.setAttribute("figcaption", imgDescr);
+  return newElement;
+};
+
+const newArticle = (info = "new info") => {
+  const newElement = document.createElement("article");
+  newElement.innerHTML = info;
+  return newElement;
+};
+
+const main = document.querySelector("main");
+main.append(newArticle("my INFO"));
+main.append(newFigure((imgSrc = "my source"), (imgDescr = "description")));

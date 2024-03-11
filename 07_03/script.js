@@ -5,6 +5,10 @@
 
 let backpackContents = ["piggy", "headlamp", "pen"];
 
+// console.log(backpackContents.join(", "));
+backpackContents.push("asdf", "234");
+let df = backpackContents.findIndex((element) => element == "piggy");
+console.log(df);
 console.log(backpackContents);
 
 // backpackContents.forEach(function (item) {

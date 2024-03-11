@@ -25,4 +25,17 @@ const greenPack = {
   },
 };
 
+const newFunction = (multiplier = 3) => {
+  const pi = 3;
+  return pi * multiplier;
+};
+
+const sum = (a = 2, b = 4) => a + b;
+
+const newArticle = document.createElement("article");
+newArticle.innerHTML = `${newFunction()} + ${sum(4, 8)}`;
+
+const main = document.querySelector("main");
+main.append(newArticle);
+
 console.log(greenPack.newVolume(5));

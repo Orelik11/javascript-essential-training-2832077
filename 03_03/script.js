@@ -2,6 +2,9 @@
  * Create a Backpack object.
  */
 
+/**
+ *
+ */
 const backpack = {
   name: "Everyday Backpack",
   volume: 30,
@@ -12,6 +15,10 @@ const backpack = {
     right: 26,
   },
   lidOpen: false,
+  /**
+   *
+   * @param {*} lidStatus
+   */
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
